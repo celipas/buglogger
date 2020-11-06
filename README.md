@@ -1,16 +1,12 @@
-## Simple Electron React Boilerplate
+# BugLogger
 
-This is a simple boilerplate to get up and running with Electron and React. It is a customized version of [Alex Devero's](https://github.com/alexdevero/electron-react-webpack-boilerplate) repo and is used in my Electron course
+React/Electron app that uses a MongoDB Atlas database to keep track of logs
 
-### Install
+## Usage
 
-#### Clone this repo
+Add your MongoDB connection string to config/db.js
 
-```
-git clone https://github.com/bradtraversy/simple-electron-react.git
-```
-
-#### Install dependencies
+### Install dependencies
 
 ```
 npm install
@@ -22,9 +18,7 @@ or
 yarn
 ```
 
-### Usage
-
-#### Run the app
+#### Run the app in development
 
 ```
 npm run start
@@ -69,7 +63,3 @@ npm run prod
 ```
 yarn prod
 ```
-
-### Change app title
-
-Change the app title in the **webpack.build.config.js** and the **webpack.dev.config.js** files
