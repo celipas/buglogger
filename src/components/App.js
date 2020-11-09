@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
 import Alert from 'react-bootstrap/Alert';
 import LogItem from './LogItem';
+import AddLogItem from './AddLogItem';
 
 const App = () => {
   const [logs, setLogs] = useState([
@@ -30,6 +31,7 @@ const App = () => {
   ]);
   return (
     <Container>
+      <AddLogItem />
       <Table>
         <thead>
           <tr>
