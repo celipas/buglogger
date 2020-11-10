@@ -77,11 +77,21 @@ ipcMain.on('logs:load', sendLogs);
 async function sendLogs() {
   try {
     const logs = await Log.find().sort({ created: 1 });
-    mainWindow.webContents.send('loges:get', JSON.stringify(logs));
+    mainWindow.webContents.send('logs:get', JSON.stringify(logs));
   } catch (err) {
     console.log(err);
   }
 }
+
+// Create log
+ipcMain.on('logs:add', async (e, item) => {
+  try {
+    await Log.create(item);
+    sendLogs();
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
