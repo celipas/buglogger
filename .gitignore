@@ -52,3 +52,9 @@ ehthumbs.db
 # Windows shortcuts #
 #####################
 *.lnk
+
+# Config #
+##########
+# config/
+config/production.json
+config/default.json
